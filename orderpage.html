@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forever Promise | Order</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="ChatGPT Image Jul 6, 2026, 11_06_05 AM.png"
+          alt="Forever Promise logo"
+        />
+        <h3>Forever Promise</h3>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="order-page">
+      <section class="order-heading">
+        <p class="eyebrow">Made for your story</p>
+        <h1 id="pageTitle">Complete Your Order</h1>
+        <p>
+          Review your ring, personalize the design, and enter your delivery
+          information.
+        </p>
+      </section>
+
+      <form id="orderForm" class="order-layout">
+        <div class="order-content">
+          <section class="selected-product">
+            <img
+              id="selectedImage"
+              src="gold-diamond.jpg"
+              alt="Selected couple ring"
+            />
+            <div>
+              <span class="selection-label">Selected item</span>
+              <h2 id="selectedName">Custom Couple Ring Set</h2>
+              <p id="selectedPrice">Base price: $149.00</p>
+              <a href="Shop.html">Change item</a>
+            </div>
+          </section>
+
+          <section class="order-card">
+            <h2>1. Customize Your Design</h2>
+            <div class="form-grid">
+              <label
+                >Ring Style<select id="ringStyle" name="ringStyle">
+                  <option>Couple Ring</option>
+                  <option>Infinity</option>
+                  <option>Heart</option>
+                  <option>Classic Band</option>
+                </select></label
+              >
+              <label
+                >Metal<select id="metal" name="metal">
+                  <option value="0">Silver</option>
+                  <option value="35">Yellow Gold (+$35)</option>
+                  <option value="40">White Gold (+$40)</option>
+                  <option value="45">Rose Gold (+$45)</option>
+                  <option value="80">Platinum (+$80)</option>
+                </select></label
+              >
+              <label
+                >Gemstone<select id="gemstone" name="gemstone">
+                  <option value="0">None</option>
+                  <option value="30">Ruby (+$30)</option>
+                  <option value="35">Sapphire (+$35)</option>
+                  <option value="40">Emerald (+$40)</option>
+                  <option value="25">Amethyst (+$25)</option>
+                  <option value="30">Garnet (+$30)</option>
+                </select></label
+              >
+              <label
+                >Diamond Option<select id="diamond" name="diamond">
+                  <option value="0">No Diamond</option>
+                  <option value="40">1 Diamond (+$40)</option>
+                  <option value="85">3 Diamonds (+$85)</option>
+                  <option value="125">5 Diamonds (+$125)</option>
+                </select></label
+              >
+              <label
+                >Men's Ring Size<select id="hisSize" name="hisSize" required>
+                  <option value="">Select size</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select></label
+              >
+              <label
+                >Women's Ring Size<select id="herSize" name="herSize" required>
+                  <option value="">Select size</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                </select></label
+              >
+              <label
+                >His Engraving<input
+                  id="hisEngraving"
+                  name="hisEngraving"
+                  type="text"
+                  maxlength="25"
+                  placeholder="Liam ♥ Emma"
+              /></label>
+              <label
+                >Her Engraving<input
+                  id="herEngraving"
+                  name="herEngraving"
+                  type="text"
+                  maxlength="25"
+                  placeholder="Forever 14.02.2026"
+              /></label>
+            </div>
+          </section>
+
+          <section class="order-card" id="shippingSection">
+            <h2>2. Shipping Information</h2>
+            <div class="form-grid">
+              <label
+                >Full Name<input
+                  name="fullName"
+                  type="text"
+                  required
+                  placeholder="Your full name"
+              /></label>
+              <label
+                >Email Address<input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="example@email.com"
+              /></label>
+              <label
+                >Phone Number<input
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="+95 ..."
+              /></label>
+              <label
+                >Township / City<input
+                  name="city"
+                  type="text"
+                  required
+                  placeholder="Dawei"
+              /></label>
+              <label class="full-width"
+                >Full Shipping Address<textarea
+                  name="address"
+                  required
+                  placeholder="House number, street, ward, township, region"
+                ></textarea>
+              </label>
+              <label
+                >Delivery Method<select id="delivery" name="delivery">
+                  <option value="0">Standard Delivery — Free</option>
+                  <option value="8">Express Delivery (+$8)</option>
+                </select></label
+              >
+              <label
+                >Quantity<input
+                  id="quantity"
+                  name="quantity"
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="10"
+              /></label>
+            </div>
+            </section>
+    <div class="payment-section">
+      <h2>3.Payment Method</h2>
+
+      <div class="payment-option">
+        <label class="payment-item">
+        <input
+          type="radio"
+          name="payment"
+          value="kpay"
+          onchange="showPaymentInfo()"
+        />
+        KPay
+        </label>
+     
+    
+      <label class="payment-item">
+        <input
+          type="radio"
+          name="payment"
+          value="wave"
+          onchange="showPaymentInfo()"
+        />
+        Wave Pay
+      </label>
+
+      <label class="payment-item">
+        <input
+          type="radio"
+          name="payment"
+          value="aya"
+          onchange="showPaymentInfo()"
+        />
+        AYA Pay
+      </label>
+
+      <label class="payment-item">
+        <input
+          type="radio"
+          name="payment"
+          value="cod"
+          onchange="showPaymentInfo()"
+        />
+        Cash on Delivery
+      </label>
+    </div>
+      <div id="paymentInfo" class="payment-info"></div>
+    </div>
+          </section>
+        </div>
+
+        <aside class="order-summary">
+          <h2>Order Summary</h2>
+          <div class="summary-line">
+            <span id="summaryProduct">Custom Couple Ring Set</span
+            ><span id="summaryBase">$149.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Customization</span><span id="summaryCustom">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery</span><span id="summaryDelivery">Free</span>
+          </div>
+          <div class="summary-line">
+            <span>Quantity</span><span id="summaryQuantity">1</span>
+          </div>
+          <div class="summary-line total">
+            <span>Total</span><span id="summaryTotal">$149.00</span>
+          </div>
+          <button type="submit">Place Order</button>
+  
+        </aside>
+      </form>
+
+      <div id="successMessage" class="success-message" hidden>
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <h2>Order prepared successfully</h2>
+          <p>
+            Your selected design and shipping information have been connected.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <img src="ChatGPT Image Jul 6, 2026, 11_06_05 AM.png" alt="logo" />
+          <h3>Forever Promise</h3>
+          <p>
+            Elegant couple rings that celebrate your precious moments forever.
+          </p>
+        </div>
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+         <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>Dawei, Myanmar</p>
+          <p>+95 9761418176</p>
+          <p>✉ foreverpromise@gmail.com</p>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        <p>© 2026 Forever Promise, couple ring by CEO Chaw Kyal Sin Thin</p></div>
+    </footer>
+  </body>
+</html>
